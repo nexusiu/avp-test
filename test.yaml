@@ -6,4 +6,4 @@ metadata:
     avp.kubernetes.io/path: "/secret/consul/nonprod"
 type: Opaque
 stringData:
-  password: gossipkey
+  password: <gossipkey>
