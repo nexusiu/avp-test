@@ -2,8 +2,6 @@ kind: Secret
 apiVersion: v1
 metadata:
   name: test-vault
-  annotations:
-    avp.kubernetes.io/path: "/secret/consul/nonprod"
 type: Opaque
 stringData:
-  password: <gossipkey>
+  password: abcd
