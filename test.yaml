@@ -2,6 +2,7 @@ kind: Secret
 apiVersion: v1
 metadata:
   name: test-vault
+  namespace: argocd
   annotations:
     avp.kubernetes.io/path: "/secret/consul/nonprod"
 type: Opaque
