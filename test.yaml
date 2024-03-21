@@ -4,7 +4,7 @@ metadata:
   name: test-vault
   namespace: argocd
   annotations:
-    avp.kubernetes.io/path: "/secret/consul/nonprod"
+    avp.kubernetes.io/path: "/data/secret/consul/nonprod"
 type: Opaque
 stringData:
   password: <gossipkey>
