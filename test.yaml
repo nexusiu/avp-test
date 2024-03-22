@@ -1,10 +1,38 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  name: test-vault
+  name: test-vault-1
   namespace: argocd
   annotations:
     avp.kubernetes.io/path: "/secret/data/consul/nonprod"
+    avp.kubernetes.io/remove-missing: "true"    
 type: Opaque
 stringData:
-  password: <gossipkey>
+  password1: <gossipkey>
+---
+
+kind: Secret
+apiVersion: v1
+metadata:
+  name: test-vault-2
+  namespace: argocd
+  annotations:
+    avp.kubernetes.io/path: "/secret/data/consul/nonprod"
+    avp.kubernetes.io/remove-missing: "true"    
+type: Opaque
+stringData:
+  password2: <something>
+
+---
+
+kind: Secret
+apiVersion: v1
+metadata:
+  name: test-vault-2
+  namespace: argocd
+  annotations:
+    avp.kubernetes.io/path: "/secret/data/consul/nonprod/not"
+    avp.kubernetes.io/remove-missing: "true"    
+type: Opaque
+stringData:
+  password3: <everything>
