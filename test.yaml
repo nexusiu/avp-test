@@ -28,7 +28,7 @@ stringData:
 kind: Secret
 apiVersion: v1
 metadata:
-  name: test-vault-2
+  name: test-vault-3
   namespace: argocd
   annotations:
     avp.kubernetes.io/path: "/secret/data/consul/nonprod/not"
